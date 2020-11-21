@@ -57,9 +57,22 @@ figure img {
     height: 100%;
 }
 
+form {
+    display       : flex;
+    flex-direction: column;
+    margin-top    : 30px;
+    width         : 100%;
+    align-items   : center;
+    justify-self  : center;
+}
+
+form label {
+    font-weight: bold;
+}
+
 label {
     display: block;
-    margin : 10px 0;
+    margin : 20px 0;
 }
 
 #welcomingText {
@@ -113,15 +126,36 @@ label {
     margin       : auto 5px auto 0;
 }
 
-form {
-    display       : flex;
-    flex-direction: column;
-    margin-top    : 30px;
-    width         : 100%;
-    align-items   : center;
-    justify-self  : center;
+#emailBox {
+    background     : #eee;
+    height         : 40px;
+    width          : calc(15em + 20px);
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    border-radius  : 30px;
 }
 
-form label {
-    font-weight: bold;
+#emailBox button {
+    background   : #f99;
+    border-radius: inherit;
+    padding      : none;
+    flex         : 1;
+    height       : 100%;
+    outline      : none;
+    border       : none;
+    cursor       : pointer;
+}
+
+#emailButton>i {
+    color: #fff;
+}
+
+#emailBox input {
+    background : transparent;
+    border     : none;
+    outline    : none;
+    line-height: 100%;
+    margin     : 10px;
+    flex       : 1;
 }
