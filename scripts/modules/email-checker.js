@@ -22,7 +22,16 @@ export default class EmailChecker {
     if (this.validateEmail()) {
       fetchPage("../success.html");
     } else {
-      console.log("Quase lá");
+      const errorDiv = document.createElement("div");
+
+      errorDiv.classList.add("error");
+      errorDiv.innerHTML = "<p>Add a valid e-mail!</p>";
+
+      this.form.appendChild(errorDiv);
+
+      setTimeout(() => {
+        this.form.removeChild(errorDiv);
+      }, 3000);
     }
   }
 
