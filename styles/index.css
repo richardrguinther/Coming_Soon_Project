@@ -160,3 +160,35 @@ label {
     margin     : 10px;
     flex       : 1;
 }
+
+@media screen and (max-width: 950px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr ;
+        width      : 100%;
+        position   : relative;
+        left       : 50%;
+        transform  : translateX(-50%);
+    }
+
+    figure {
+        display: none;
+    }
+
+    #welcomingText {
+        width      : 100%;
+        grid-column: 1 / 2;
+    }
+
+    #WCS {
+        font-size: 32px;
+    }
+
+    #email_subscriber {
+        margin-left: auto;
+    }
+}
