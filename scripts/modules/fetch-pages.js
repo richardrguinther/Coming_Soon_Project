@@ -1,4 +1,4 @@
-export default function fetchPage(url) {
+export default function fetchPage(url, title, file) {
   const main = document.querySelector("main");
   const currentPage = main.innerHTML.slice();
 
@@ -7,7 +7,7 @@ export default function fetchPage(url) {
     const text = await response.text();
 
     main.innerHTML = text;
-    history.replaceState({ success: "1" }, "success", "congratulations.html");
+    history.replaceState({ success: "1" }, title, file);
   }
 
   function revertPage() {
