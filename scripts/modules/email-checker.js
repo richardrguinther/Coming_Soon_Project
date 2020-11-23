@@ -20,7 +20,7 @@ export default class EmailChecker {
   check(event) {
     event.preventDefault();
     if (this.validateEmail()) {
-      fetchPage("./success.html", "success", "Congratulations");
+      fetchPage("../success.html", "success", "Congratulations");
     } else {
       const errorDiv = document.createElement("div");
 
